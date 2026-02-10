@@ -1,0 +1,29 @@
+.profile-page {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.profile-page h1 {
+    margin-bottom: var(--spacing-6);
+}
+
+.profile-card {
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-6);
+    display: flex;
+    gap: var(--spacing-6);
+    align-items: flex-start;
+}
+
+.profile-card h3 {
+    margin-bottom: var(--spacing-4);
+}
+
+.message {
+    padding: var(--spacing-3);
+    background: var(--color-success-light);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-4);
+}

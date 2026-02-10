@@ -1,0 +1,40 @@
+{
+    "name": "task-team-management",
+    "version": "1.0.0",
+    "description": "Production-quality Task & Team Management application for documentation-generation benchmarking",
+    "private": true,
+    "workspaces": [
+        "backend",
+        "frontend"
+    ],
+    "scripts": {
+        "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+        "dev:backend": "npm run dev --workspace=backend",
+        "dev:frontend": "npm run dev --workspace=frontend",
+        "build": "npm run build --workspaces",
+        "test": "npm run test --workspaces",
+        "test:backend": "npm run test --workspace=backend",
+        "test:frontend": "npm run test --workspace=frontend",
+        "lint": "npm run lint --workspaces",
+        "lint:fix": "npm run lint:fix --workspaces",
+        "seed": "npm run seed --workspace=backend",
+        "docker:up": "docker-compose up -d",
+        "docker:down": "docker-compose down"
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2",
+        "husky": "^8.0.3",
+        "lint-staged": "^15.2.0"
+    },
+    "lint-staged": {
+        "backend/**/*.js": [
+            "eslint --fix"
+        ],
+        "frontend/**/*.{js,jsx,ts,tsx}": [
+            "eslint --fix"
+        ]
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    }
+}

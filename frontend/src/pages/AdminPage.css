@@ -1,0 +1,51 @@
+.admin-loading {
+    display: flex;
+    justify-content: center;
+    min-height: 60vh;
+    align-items: center;
+}
+
+.admin-page {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.admin-page h1 {
+    margin-bottom: var(--spacing-6);
+}
+
+.admin-card {
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-6);
+}
+
+.admin-card h2 {
+    margin-bottom: var(--spacing-4);
+    font-size: var(--font-size-lg);
+}
+
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.users-table th,
+.users-table td {
+    padding: var(--spacing-3);
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.users-table th {
+    font-size: var(--font-size-xs);
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+}
+
+.user-cell {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+}

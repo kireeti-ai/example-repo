@@ -1,0 +1,59 @@
+.tasks-loading {
+    display: flex;
+    justify-content: center;
+    min-height: 60vh;
+    align-items: center;
+}
+
+.tasks-page {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.filter-tabs {
+    display: flex;
+    gap: var(--spacing-2);
+}
+
+.filter-tab {
+    padding: var(--spacing-2) var(--spacing-4);
+    border: none;
+    background: var(--color-gray-100);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    font-size: var(--font-size-sm);
+}
+
+.filter-tab.active {
+    background: var(--color-primary-600);
+    color: white;
+}
+
+.tasks-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+    margin-top: var(--spacing-6);
+}
+
+.task-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-4);
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+}
+
+.task-card-main {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+}
+
+.task-number {
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    color: var(--color-primary-600);
+}

@@ -1,0 +1,102 @@
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--color-primary-50), var(--color-gray-100));
+    padding: var(--spacing-4);
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 420px;
+    background: var(--color-bg-surface);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-xl);
+    padding: var(--spacing-8);
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: var(--spacing-6);
+}
+
+.auth-logo {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-primary-600);
+    margin-bottom: var(--spacing-4);
+}
+
+.auth-title {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-2);
+}
+
+.auth-subtitle {
+    color: var(--color-text-secondary);
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+}
+
+.auth-error {
+    background: var(--color-error-light);
+    color: var(--color-error-dark);
+    padding: var(--spacing-3);
+    border-radius: var(--radius-lg);
+    font-size: var(--font-size-sm);
+    text-align: center;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-4);
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: var(--spacing-6);
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+.auth-footer a {
+    color: var(--color-primary-600);
+    font-weight: 500;
+}
+
+.demo-credentials {
+    margin-top: var(--spacing-6);
+    padding: var(--spacing-4);
+    background: var(--color-gray-50);
+    border-radius: var(--radius-lg);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+}
+
+.demo-credentials .demo-title {
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-2);
+}
+
+.demo-credentials p {
+    margin-bottom: var(--spacing-1);
+}
+
+@media (max-width: 480px) {
+    .auth-container {
+        padding: var(--spacing-6);
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
