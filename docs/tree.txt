@@ -1,0 +1,175 @@
+.
+|-- .github
+|   `-- workflows
+|       `-- ci.yml
+|-- Dockerfile
+|-- README.md
+|-- backend
+|   |-- .env.example
+|   |-- .eslintrc.js
+|   |-- package.json
+|   |-- src
+|   |   |-- app.js
+|   |   |-- config
+|   |   |   |-- database.js
+|   |   |   `-- index.js
+|   |   |-- docs
+|   |   |   `-- swagger.js
+|   |   |-- middleware
+|   |   |   |-- auth.js
+|   |   |   |-- errorHandler.js
+|   |   |   |-- index.js
+|   |   |   |-- rbac.js
+|   |   |   |-- requestLogger.js
+|   |   |   `-- validate.js
+|   |   |-- modules
+|   |   |   |-- activity
+|   |   |   |   |-- Activity.model.js
+|   |   |   |   |-- controllers
+|   |   |   |   |   `-- activity.controller.js
+|   |   |   |   |-- routes
+|   |   |   |   |   `-- activity.routes.js
+|   |   |   |   `-- services
+|   |   |   |       `-- activity.service.js
+|   |   |   |-- auth
+|   |   |   |   |-- controllers
+|   |   |   |   |   `-- auth.controller.js
+|   |   |   |   |-- routes
+|   |   |   |   |   `-- auth.routes.js
+|   |   |   |   |-- services
+|   |   |   |   |   `-- auth.service.js
+|   |   |   |   `-- validators
+|   |   |   |       `-- auth.validator.js
+|   |   |   |-- comments
+|   |   |   |   |-- Comment.model.js
+|   |   |   |   |-- controllers
+|   |   |   |   |   `-- comment.controller.js
+|   |   |   |   |-- routes
+|   |   |   |   |   `-- comment.routes.js
+|   |   |   |   |-- services
+|   |   |   |   |   `-- comment.service.js
+|   |   |   |   `-- validators
+|   |   |   |       `-- comment.validator.js
+|   |   |   |-- labels
+|   |   |   |   |-- Label.model.js
+|   |   |   |   |-- controllers
+|   |   |   |   |   `-- label.controller.js
+|   |   |   |   |-- routes
+|   |   |   |   |   `-- label.routes.js
+|   |   |   |   |-- services
+|   |   |   |   |   `-- label.service.js
+|   |   |   |   `-- validators
+|   |   |   |       `-- label.validator.js
+|   |   |   |-- projects
+|   |   |   |   |-- Project.model.js
+|   |   |   |   |-- controllers
+|   |   |   |   |   `-- project.controller.js
+|   |   |   |   |-- repositories
+|   |   |   |   |   `-- project.repository.js
+|   |   |   |   |-- routes
+|   |   |   |   |   `-- project.routes.js
+|   |   |   |   |-- services
+|   |   |   |   |   `-- project.service.js
+|   |   |   |   `-- validators
+|   |   |   |       `-- project.validator.js
+|   |   |   |-- tasks
+|   |   |   |   |-- Task.model.js
+|   |   |   |   |-- controllers
+|   |   |   |   |   `-- task.controller.js
+|   |   |   |   |-- repositories
+|   |   |   |   |   `-- task.repository.js
+|   |   |   |   |-- routes
+|   |   |   |   |   `-- task.routes.js
+|   |   |   |   |-- services
+|   |   |   |   |   `-- task.service.js
+|   |   |   |   `-- validators
+|   |   |   |       `-- task.validator.js
+|   |   |   `-- users
+|   |   |       |-- User.model.js
+|   |   |       |-- controllers
+|   |   |       |   `-- user.controller.js
+|   |   |       |-- repositories
+|   |   |       |   `-- user.repository.js
+|   |   |       |-- routes
+|   |   |       |   `-- user.routes.js
+|   |   |       |-- services
+|   |   |       |   `-- user.service.js
+|   |   |       `-- validators
+|   |   |           `-- user.validator.js
+|   |   |-- routes
+|   |   |   `-- index.js
+|   |   |-- scripts
+|   |   |   `-- seed.js
+|   |   |-- server.js
+|   |   `-- utils
+|   |       |-- ApiError.js
+|   |       |-- ApiResponse.js
+|   |       |-- asyncHandler.js
+|   |       |-- index.js
+|   |       |-- jwt.js
+|   |       `-- logger.js
+|   `-- tests
+|       |-- integration
+|       |   |-- auth.test.js
+|       |   |-- projects.test.js
+|       |   `-- tasks.test.js
+|       `-- setup.js
+|-- docker-compose.yml
+|-- docs
+|   |-- ADR-001.md
+|   |-- api-reference.md
+|   |-- architecture.md
+|   |-- changelog.md
+|   |-- data-model.md
+|   |-- security.md
+|   `-- testing.md
+|-- frontend
+|   |-- Dockerfile.dev
+|   |-- index.html
+|   |-- package.json
+|   |-- src
+|   |   |-- App.jsx
+|   |   |-- components
+|   |   |   |-- auth
+|   |   |   |   `-- ProtectedRoute.jsx
+|   |   |   `-- common
+|   |   |       |-- Avatar.css
+|   |   |       |-- Avatar.jsx
+|   |   |       |-- Layout.css
+|   |   |       |-- Layout.jsx
+|   |   |       |-- LoadingSpinner.css
+|   |   |       |-- LoadingSpinner.jsx
+|   |   |       |-- Navbar.css
+|   |   |       |-- Navbar.jsx
+|   |   |       |-- Sidebar.css
+|   |   |       `-- Sidebar.jsx
+|   |   |-- context
+|   |   |   `-- AuthContext.jsx
+|   |   |-- index.css
+|   |   |-- main.jsx
+|   |   |-- pages
+|   |   |   |-- AdminPage.css
+|   |   |   |-- AdminPage.jsx
+|   |   |   |-- AuthPages.css
+|   |   |   |-- DashboardPage.css
+|   |   |   |-- DashboardPage.jsx
+|   |   |   |-- LoginPage.jsx
+|   |   |   |-- ProfilePage.css
+|   |   |   |-- ProfilePage.jsx
+|   |   |   |-- ProjectDetailPage.css
+|   |   |   |-- ProjectDetailPage.jsx
+|   |   |   |-- ProjectsPage.css
+|   |   |   |-- ProjectsPage.jsx
+|   |   |   |-- RegisterPage.jsx
+|   |   |   |-- TasksPage.css
+|   |   |   `-- TasksPage.jsx
+|   |   `-- services
+|   |       |-- api.js
+|   |       |-- authService.js
+|   |       |-- projectService.js
+|   |       |-- taskService.js
+|   |       `-- userService.js
+|   |-- tests
+|   |   `-- setup.js
+|   `-- vite.config.js
+`-- package.json

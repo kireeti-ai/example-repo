@@ -1,0 +1,15 @@
+sequenceDiagram
+    autonumber
+    actor User
+    participant Client as Frontend Client
+    participant API as Backend Service
+    participant Auth as Auth Module
+    participant DB as Database
+    User->>Client: Internal Action / Navigation
+    Client->>API: Secure API Request (Bearer Token)
+    API->>Auth: Validate Session/Token
+    Auth-->>API: Token Valid
+        API->>DB: Query Operational Data
+        DB-->>API: Result Set
+    API-->>Client: JSON Response
+    Client-->>User: Render Data

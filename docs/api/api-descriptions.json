@@ -1,0 +1,419 @@
+{
+  "total_endpoints": 46,
+  "endpoints": [
+    {
+      "key": "GET /health",
+      "method": "GET",
+      "path": "/health",
+      "source_file": "backend/src/app.js",
+      "summary": "Check Health",
+      "parameters": "Path params: none detected",
+      "responses": "200 OK, 404 Not Found, 500 Internal Server Error"
+    },
+    {
+      "key": "GET /api/docs.json",
+      "method": "GET",
+      "path": "/api/docs.json",
+      "source_file": "backend/src/app.js",
+      "summary": "List Api (docs.json)",
+      "parameters": "Path params: none detected",
+      "responses": "200 OK, 404 Not Found, 500 Internal Server Error"
+    },
+    {
+      "key": "GET /me",
+      "method": "GET",
+      "path": "/me",
+      "source_file": "backend/src/modules/activity/routes/activity.routes.js",
+      "summary": "List Me",
+      "parameters": "Path params: none detected",
+      "responses": "200 OK, 401 Unauthorized, 403 Forbidden, 500 Internal Server Error"
+    },
+    {
+      "key": "GET /project/{projectId}",
+      "method": "GET",
+      "path": "/project/{projectId}",
+      "source_file": "backend/src/modules/activity/routes/activity.routes.js",
+      "summary": "Get Project",
+      "parameters": "Path params: projectId",
+      "responses": "200 OK, 401 Unauthorized, 403 Forbidden, 500 Internal Server Error"
+    },
+    {
+      "key": "GET /user/{userId}",
+      "method": "GET",
+      "path": "/user/{userId}",
+      "source_file": "backend/src/modules/activity/routes/activity.routes.js",
+      "summary": "Get User",
+      "parameters": "Path params: userId",
+      "responses": "200 OK, 401 Unauthorized, 403 Forbidden, 500 Internal Server Error"
+    },
+    {
+      "key": "POST /register",
+      "method": "POST",
+      "path": "/register",
+      "source_file": "backend/src/modules/auth/routes/auth.routes.js",
+      "summary": "Register Register",
+      "parameters": "Path params: none detected",
+      "responses": "200 OK, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 500 Internal Server Error"
+    },
+    {
+      "key": "POST /login",
+      "method": "POST",
+      "path": "/login",
+      "source_file": "backend/src/modules/auth/routes/auth.routes.js",
+      "summary": "Authenticate Login",
+      "parameters": "Path params: none detected",
+      "responses": "200 OK, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 500 Internal Server Error"
+    },
+    {
+      "key": "POST /logout",
+      "method": "POST",
+      "path": "/logout",
+      "source_file": "backend/src/modules/auth/routes/auth.routes.js",
+      "summary": "Logout Logout",
+      "parameters": "Path params: none detected",
+      "responses": "200 OK, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 500 Internal Server Error"
+    },
+    {
+      "key": "POST /refresh",
+      "method": "POST",
+      "path": "/refresh",
+      "source_file": "backend/src/modules/auth/routes/auth.routes.js",
+      "summary": "Create Refresh",
+      "parameters": "Path params: none detected",
+      "responses": "200 OK, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 500 Internal Server Error"
+    },
+    {
+      "key": "POST /change-password",
+      "method": "POST",
+      "path": "/change-password",
+      "source_file": "backend/src/modules/auth/routes/auth.routes.js",
+      "summary": "Create Change Password",
+      "parameters": "Path params: none detected",
+      "responses": "200 OK, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 500 Internal Server Error"
+    },
+    {
+      "key": "GET /me",
+      "method": "GET",
+      "path": "/me",
+      "source_file": "backend/src/modules/auth/routes/auth.routes.js",
+      "summary": "List Me",
+      "parameters": "Path params: none detected",
+      "responses": "200 OK, 401 Unauthorized, 403 Forbidden, 500 Internal Server Error"
+    },
+    {
+      "key": "GET /",
+      "method": "GET",
+      "path": "/",
+      "source_file": "backend/src/modules/comments/routes/comment.routes.js",
+      "summary": "List Resource endpoint",
+      "parameters": "Path params: none detected",
+      "responses": "200 OK, 201 Created, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 500 Internal Server Error"
+    },
+    {
+      "key": "POST /",
+      "method": "POST",
+      "path": "/",
+      "source_file": "backend/src/modules/comments/routes/comment.routes.js",
+      "summary": "Create Resource endpoint",
+      "parameters": "Path params: none detected",
+      "responses": "200 OK, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 500 Internal Server Error"
+    },
+    {
+      "key": "PATCH /{id}",
+      "method": "PATCH",
+      "path": "/{id}",
+      "source_file": "backend/src/modules/comments/routes/comment.routes.js",
+      "summary": "Update Resource endpoint",
+      "parameters": "Path params: id",
+      "responses": "200 OK, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 500 Internal Server Error"
+    },
+    {
+      "key": "DELETE /{id}",
+      "method": "DELETE",
+      "path": "/{id}",
+      "source_file": "backend/src/modules/comments/routes/comment.routes.js",
+      "summary": "Delete Resource endpoint",
+      "parameters": "Path params: id",
+      "responses": "200 OK, 204 No Content, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 500 Internal Server Error"
+    },
+    {
+      "key": "POST /{id}/reactions",
+      "method": "POST",
+      "path": "/{id}/reactions",
+      "source_file": "backend/src/modules/comments/routes/comment.routes.js",
+      "summary": "Create Reactions",
+      "parameters": "Path params: id",
+      "responses": "200 OK, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 500 Internal Server Error"
+    },
+    {
+      "key": "DELETE /{id}/reactions/{emoji}",
+      "method": "DELETE",
+      "path": "/{id}/reactions/{emoji}",
+      "source_file": "backend/src/modules/comments/routes/comment.routes.js",
+      "summary": "Delete Reactions",
+      "parameters": "Path params: id, emoji",
+      "responses": "204 No Content, 401 Unauthorized, 403 Forbidden, 500 Internal Server Error"
+    },
+    {
+      "key": "GET /",
+      "method": "GET",
+      "path": "/",
+      "source_file": "backend/src/modules/labels/routes/label.routes.js",
+      "summary": "List Resource endpoint",
+      "parameters": "Path params: none detected",
+      "responses": "200 OK, 201 Created, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 500 Internal Server Error"
+    },
+    {
+      "key": "POST /",
+      "method": "POST",
+      "path": "/",
+      "source_file": "backend/src/modules/labels/routes/label.routes.js",
+      "summary": "Create Resource endpoint",
+      "parameters": "Path params: none detected",
+      "responses": "200 OK, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 500 Internal Server Error"
+    },
+    {
+      "key": "GET /{id}",
+      "method": "GET",
+      "path": "/{id}",
+      "source_file": "backend/src/modules/labels/routes/label.routes.js",
+      "summary": "Get Resource endpoint",
+      "parameters": "Path params: id",
+      "responses": "200 OK, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 500 Internal Server Error"
+    },
+    {
+      "key": "PATCH /{id}",
+      "method": "PATCH",
+      "path": "/{id}",
+      "source_file": "backend/src/modules/labels/routes/label.routes.js",
+      "summary": "Update Resource endpoint",
+      "parameters": "Path params: id",
+      "responses": "200 OK, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 500 Internal Server Error"
+    },
+    {
+      "key": "DELETE /{id}",
+      "method": "DELETE",
+      "path": "/{id}",
+      "source_file": "backend/src/modules/labels/routes/label.routes.js",
+      "summary": "Delete Resource endpoint",
+      "parameters": "Path params: id",
+      "responses": "204 No Content, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 500 Internal Server Error"
+    },
+    {
+      "key": "GET /analytics",
+      "method": "GET",
+      "path": "/analytics",
+      "source_file": "backend/src/modules/projects/routes/project.routes.js",
+      "summary": "List Analytics",
+      "parameters": "Path params: none detected",
+      "responses": "200 OK, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 500 Internal Server Error"
+    },
+    {
+      "key": "GET /",
+      "method": "GET",
+      "path": "/",
+      "source_file": "backend/src/modules/projects/routes/project.routes.js",
+      "summary": "List Resource endpoint",
+      "parameters": "Path params: none detected",
+      "responses": "200 OK, 201 Created, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 409 Conflict, 500 Internal Server Error"
+    },
+    {
+      "key": "POST /",
+      "method": "POST",
+      "path": "/",
+      "source_file": "backend/src/modules/projects/routes/project.routes.js",
+      "summary": "Create Resource endpoint",
+      "parameters": "Path params: none detected",
+      "responses": "200 OK, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 500 Internal Server Error"
+    },
+    {
+      "key": "GET /{id}",
+      "method": "GET",
+      "path": "/{id}",
+      "source_file": "backend/src/modules/projects/routes/project.routes.js",
+      "summary": "Get Resource endpoint",
+      "parameters": "Path params: id",
+      "responses": "200 OK, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 500 Internal Server Error"
+    },
+    {
+      "key": "PATCH /{id}",
+      "method": "PATCH",
+      "path": "/{id}",
+      "source_file": "backend/src/modules/projects/routes/project.routes.js",
+      "summary": "Update Resource endpoint",
+      "parameters": "Path params: id",
+      "responses": "200 OK, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 500 Internal Server Error"
+    },
+    {
+      "key": "DELETE /{id}",
+      "method": "DELETE",
+      "path": "/{id}",
+      "source_file": "backend/src/modules/projects/routes/project.routes.js",
+      "summary": "Delete Resource endpoint",
+      "parameters": "Path params: id",
+      "responses": "200 OK, 204 No Content, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 409 Conflict, 500 Internal Server Error"
+    },
+    {
+      "key": "POST /{id}/members",
+      "method": "POST",
+      "path": "/{id}/members",
+      "source_file": "backend/src/modules/projects/routes/project.routes.js",
+      "summary": "Create Members",
+      "parameters": "Path params: id",
+      "responses": "200 OK, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 500 Internal Server Error"
+    },
+    {
+      "key": "PATCH /{id}/members/{memberId}",
+      "method": "PATCH",
+      "path": "/{id}/members/{memberId}",
+      "source_file": "backend/src/modules/projects/routes/project.routes.js",
+      "summary": "Update Members",
+      "parameters": "Path params: id, memberId",
+      "responses": "200 OK, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 500 Internal Server Error"
+    },
+    {
+      "key": "DELETE /{id}/members/{memberId}",
+      "method": "DELETE",
+      "path": "/{id}/members/{memberId}",
+      "source_file": "backend/src/modules/projects/routes/project.routes.js",
+      "summary": "Delete Members",
+      "parameters": "Path params: id, memberId",
+      "responses": "204 No Content, 401 Unauthorized, 403 Forbidden, 500 Internal Server Error"
+    },
+    {
+      "key": "GET /my-tasks",
+      "method": "GET",
+      "path": "/my-tasks",
+      "source_file": "backend/src/modules/tasks/routes/task.routes.js",
+      "summary": "List My Tasks",
+      "parameters": "Path params: none detected",
+      "responses": "200 OK, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 500 Internal Server Error"
+    },
+    {
+      "key": "PATCH /bulk",
+      "method": "PATCH",
+      "path": "/bulk",
+      "source_file": "backend/src/modules/tasks/routes/task.routes.js",
+      "summary": "Update Bulk",
+      "parameters": "Path params: none detected",
+      "responses": "200 OK, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 500 Internal Server Error"
+    },
+    {
+      "key": "GET /board/{projectId}",
+      "method": "GET",
+      "path": "/board/{projectId}",
+      "source_file": "backend/src/modules/tasks/routes/task.routes.js",
+      "summary": "Get Board",
+      "parameters": "Path params: projectId",
+      "responses": "200 OK, 401 Unauthorized, 403 Forbidden, 500 Internal Server Error"
+    },
+    {
+      "key": "GET /stats/{projectId}",
+      "method": "GET",
+      "path": "/stats/{projectId}",
+      "source_file": "backend/src/modules/tasks/routes/task.routes.js",
+      "summary": "Get Stats",
+      "parameters": "Path params: projectId",
+      "responses": "200 OK, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 500 Internal Server Error"
+    },
+    {
+      "key": "GET /",
+      "method": "GET",
+      "path": "/",
+      "source_file": "backend/src/modules/tasks/routes/task.routes.js",
+      "summary": "List Resource endpoint",
+      "parameters": "Path params: none detected",
+      "responses": "200 OK, 201 Created, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 500 Internal Server Error"
+    },
+    {
+      "key": "POST /",
+      "method": "POST",
+      "path": "/",
+      "source_file": "backend/src/modules/tasks/routes/task.routes.js",
+      "summary": "Create Resource endpoint",
+      "parameters": "Path params: none detected",
+      "responses": "200 OK, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 500 Internal Server Error"
+    },
+    {
+      "key": "GET /{id}",
+      "method": "GET",
+      "path": "/{id}",
+      "source_file": "backend/src/modules/tasks/routes/task.routes.js",
+      "summary": "Get Resource endpoint",
+      "parameters": "Path params: id",
+      "responses": "200 OK, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 500 Internal Server Error"
+    },
+    {
+      "key": "PATCH /{id}",
+      "method": "PATCH",
+      "path": "/{id}",
+      "source_file": "backend/src/modules/tasks/routes/task.routes.js",
+      "summary": "Update Resource endpoint",
+      "parameters": "Path params: id",
+      "responses": "200 OK, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 500 Internal Server Error"
+    },
+    {
+      "key": "DELETE /{id}",
+      "method": "DELETE",
+      "path": "/{id}",
+      "source_file": "backend/src/modules/tasks/routes/task.routes.js",
+      "summary": "Delete Resource endpoint",
+      "parameters": "Path params: id",
+      "responses": "204 No Content, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 500 Internal Server Error"
+    },
+    {
+      "key": "GET /statistics",
+      "method": "GET",
+      "path": "/statistics",
+      "source_file": "backend/src/modules/users/routes/user.routes.js",
+      "summary": "List Statistics",
+      "parameters": "Path params: none detected",
+      "responses": "200 OK, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 500 Internal Server Error"
+    },
+    {
+      "key": "GET /",
+      "method": "GET",
+      "path": "/",
+      "source_file": "backend/src/modules/users/routes/user.routes.js",
+      "summary": "List Resource endpoint",
+      "parameters": "Path params: none detected",
+      "responses": "200 OK, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 500 Internal Server Error"
+    },
+    {
+      "key": "GET /{id}",
+      "method": "GET",
+      "path": "/{id}",
+      "source_file": "backend/src/modules/users/routes/user.routes.js",
+      "summary": "Get Resource endpoint",
+      "parameters": "Path params: id",
+      "responses": "200 OK, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 500 Internal Server Error"
+    },
+    {
+      "key": "PATCH /{id}",
+      "method": "PATCH",
+      "path": "/{id}",
+      "source_file": "backend/src/modules/users/routes/user.routes.js",
+      "summary": "Update Resource endpoint",
+      "parameters": "Path params: id",
+      "responses": "200 OK, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 500 Internal Server Error"
+    },
+    {
+      "key": "PATCH /{id}/role",
+      "method": "PATCH",
+      "path": "/{id}/role",
+      "source_file": "backend/src/modules/users/routes/user.routes.js",
+      "summary": "Update Role",
+      "parameters": "Path params: id",
+      "responses": "200 OK, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 500 Internal Server Error"
+    },
+    {
+      "key": "DELETE /{id}",
+      "method": "DELETE",
+      "path": "/{id}",
+      "source_file": "backend/src/modules/users/routes/user.routes.js",
+      "summary": "Delete Resource endpoint",
+      "parameters": "Path params: id",
+      "responses": "204 No Content, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 500 Internal Server Error"
+    }
+  ]
+}

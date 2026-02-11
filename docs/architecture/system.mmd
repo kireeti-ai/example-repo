@@ -1,0 +1,22 @@
+graph TD
+    User([User])
+    subgraph Client ["Client Layer"]
+        Frontend[Frontend Application]
+    end
+    User -->|HTTPS| Frontend
+    subgraph Server ["Server Layer"]
+        Backend[Backend API]
+        Frontend -->|REST/GraphQL| Backend
+        Auth[Auth Service/Module]
+        Backend -.->|Validate Token| Auth
+    end
+    subgraph Infra ["Infrastructure Layer"]
+        DB[(Primary Database)]
+        Backend -->|Read/Write| DB
+    end
+    classDef client fill:#e3f2fd,stroke:#1565c0,color:black,stroke-width:2px;
+    classDef server fill:#f3e5f5,stroke:#7b1fa2,color:black,stroke-width:2px;
+    classDef infra fill:#e8f5e9,stroke:#2e7d32,color:black,stroke-width:2px;
+    class Frontend client;
+    class Backend,Auth,Worker server;
+    class DB,Cache,MQ,S3 infra;

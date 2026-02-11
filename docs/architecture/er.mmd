@@ -1,0 +1,37 @@
+erDiagram
+    ACTIVITY {
+        uuid id PK
+        datetime created_at
+        datetime updated_at
+    }
+    COMMENT {
+        uuid id PK
+        datetime created_at
+        datetime updated_at
+    }
+    LABEL {
+        uuid id PK
+        datetime created_at
+        datetime updated_at
+    }
+    PROJECT {
+        uuid id PK
+        datetime created_at
+        datetime updated_at
+    }
+    TASK {
+        uuid id PK
+        datetime created_at
+        datetime updated_at
+    }
+    USER {
+        uuid id PK
+        datetime created_at
+        datetime updated_at
+    }
+    USER ||--o{ PROJECT : manages
+    PROJECT ||--|{ TASK : contains
+    TASK ||--o{ COMMENT : has
+    USER ||--o{ COMMENT : owns
+    USER ||--o{ ACTIVITY : owns
+    USER ||--o{ LABEL : owns
