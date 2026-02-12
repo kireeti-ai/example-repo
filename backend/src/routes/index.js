@@ -12,6 +12,9 @@ const taskRoutes = require('../modules/tasks/routes/task.routes');
 const commentRoutes = require('../modules/comments/routes/comment.routes');
 const labelRoutes = require('../modules/labels/routes/label.routes');
 const activityRoutes = require('../modules/activity/routes/activity.routes');
+const notificationRoutes = require('../modules/notifications/routes/notification.routes');
+const dashboardRoutes = require('../modules/dashboard/routes/dashboard.routes');
+const searchRoutes = require('../modules/search/routes/search.routes');
 
 const router = express.Router();
 
@@ -23,5 +26,8 @@ router.use('/tasks', taskRoutes);
 router.use('/comments', commentRoutes);
 router.use('/labels', labelRoutes);
 router.use('/activities', activityRoutes);
+router.use('/notifications', notificationRoutes);
+router.use('/dashboard', dashboardRoutes);
+router.use('/search', searchRoutes);
 
 module.exports = router;
