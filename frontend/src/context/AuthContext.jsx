@@ -10,6 +10,7 @@ export function AuthProvider({ children }) {
     useEffect(() => {
         checkAuth();
     }, []);
+    //araegarrg
 
     const checkAuth = async () => {
         try {
