@@ -1,55 +1,29 @@
-import { Routes, Route, Navigate } from 'react-router-dom';
-import { useAuth } from './context/AuthContext';
+import Navbar from './components/landing/Navbar';
+import Hero from './components/landing/Hero';
+import Problem from './components/landing/Problem';
+import HowItWorks from './components/landing/HowItWorks';
+import Triggers from './components/landing/Triggers';
+import CoverageTiers from './components/landing/CoverageTiers';
+import TriBrain from './components/landing/TriBrain';
+import Footer from './components/landing/Footer';
 
-// Pages
-import LoginPage from './pages/LoginPage';
-import RegisterPage from './pages/RegisterPage';
-import DashboardPage from './pages/DashboardPage';
-import ProjectsPage from './pages/ProjectsPage';
-import ProjectDetailPage from './pages/ProjectDetailPage';
-import TasksPage from './pages/TasksPage';
-import ProfilePage from './pages/ProfilePage';
-import AdminPage from './pages/AdminPage';
-
-// Components
-import Layout from './components/common/Layout';
-import ProtectedRoute from './components/auth/ProtectedRoute';
-import LoadingSpinner from './components/common/LoadingSpinner';
-
-function App() {
-    const { loading } = useAuth();
-
-    if (loading) {
-        return (
-            <div className="flex items-center justify-center" style={{ minHeight: '100vh' }}>
-                <LoadingSpinner size="lg" />
-            </div>
-        );
-    }
-
-    return (
-        <Routes>
-            {/* Public routes */}
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/register" element={<RegisterPage />} />
-
-            {/* Protected routes */}
-            <Route element={<ProtectedRoute />}>
-                <Route element={<Layout />}>
-                    <Route path="/" element={<Navigate to="/dashboard" replace />} />
-                    <Route path="/dashboard" element={<DashboardPage />} />
-                    <Route path="/projects" element={<ProjectsPage />} />
-                    <Route path="/projects/:id" element={<ProjectDetailPage />} />
-                    <Route path="/tasks" element={<TasksPage />} />
-                    <Route path="/profile" element={<ProfilePage />} />
-                    <Route path="/admin" element={<AdminPage />} />
-                </Route>
-            </Route>
-
-            {/* Catch-all */}
-            <Route path="*" element={<Navigate to="/dashboard" replace />} />
-        </Routes>
-    );
+export default function App() {
+  return (
+    <>
+      <div className="grain-overlay" />
+      <Navbar />
+      <Hero />
+      <hr className="section-divider" />
+      <Problem />
+      <hr className="section-divider" />
+      <HowItWorks />
+      <hr className="section-divider" />
+      <Triggers />
+      <hr className="section-divider" />
+      <CoverageTiers />
+      <hr className="section-divider" />
+      <TriBrain />
+      <Footer />
+    </>
+  );
 }
-
-export default App;
